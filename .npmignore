@@ -1,0 +1,45 @@
+# Development files
+src/
+scripts/
+coverage/
+.github/
+.vscode/
+.idea/
+
+# Configuration files
+tsconfig.json
+tsconfig.build.json
+tsup.config.ts
+jest.config.js
+setupTests.ts
+.prettierrc
+.prettierignore
+.eslintrc*
+.gitignore
+
+# Development dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Testing and build artifacts
+*.test.*
+*.spec.*
+__tests__/
+**/__test__/
+**/*.test.*
+**/*.spec.*
+
+# Documentation (keep README.md)
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+CHANGELOG.md
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local
+.env.*.local

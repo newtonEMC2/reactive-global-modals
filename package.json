@@ -1,0 +1,110 @@
+{
+  "name": "@qcolabs/reactive-global-modals",
+  "version": "0.1.0",
+  "description": "A lightweight, accessible, and customizable React modal component library with TypeScript support. Features click-outside-to-close, responsive design, and zero dependencies.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./styles": "./dist/composable-modal.module.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production tsup --tsconfig tsconfig.build.json",
+    "build:dev": "NODE_ENV=development tsup --tsconfig tsconfig.build.json",
+    "dev": "NODE_ENV=development tsup --watch",
+    "clean": "rm -rf dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "size-check": "echo \"📦 Checking package size...\" && du -sh dist/",
+    "validate": "pnpm format:check && pnpm type-check && pnpm test",
+    "prepublishOnly": "pnpm validate && pnpm clean && pnpm build && pnpm size-check"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "popup",
+    "overlay",
+    "component",
+    "typescript",
+    "tsx",
+    "ui",
+    "accessibility",
+    "a11y",
+    "responsive",
+    "lightweight",
+    "zero-dependencies",
+    "react-component",
+    "react-modal",
+    "react-dialog",
+    "frontend",
+    "web-components",
+    "esm",
+    "cjs",
+    "modern"
+  ],
+  "author": "Alexis Corbacho <corbacho.golmar.alexis@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newtonEMC2/reactive-global-modals.git"
+  },
+  "bugs": {
+    "url": "https://github.com/newtonEMC2/reactive-global-modals/issues"
+  },
+  "homepage": "https://github.com/newtonEMC2/reactive-global-modals#readme",
+  "demo": "https://codesandbox.io/p/github/newtonEMC2/reactive-global-modals/main?import=true&workspaceId=ws_XP4ZJku14x3GBrsVK3Gt5s",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/alexis-corbacho"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.2.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "prettier": "^3.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.4.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
